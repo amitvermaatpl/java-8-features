@@ -1,0 +1,23 @@
+###==### JAVA_8 Features ###==###
+
+# Lambda Expression #
+A function that doesn’t have a name and doesn’t belong to any class.
+
+//Syntax of lambda expression
+(parameter_list) -> {function_body}
+
+A lambda expression in Java has these main parts: Lambda expression only has body and parameter list.
+1. No name – function is anonymous so we don’t care about the name
+2. Parameter list
+3. Body – This is the main part of the function.
+4. No return type – The java 8 compiler is able to infer the return type by checking the code. 
+
+# Stream API #
+
+By using streams we can perform various aggregate operations on the data returned from collections, 
+arrays, Input/Output operations. 
+
+Create a stream()  ---> Perform a intermediate operation[filter()] ----> then perform terminal operation [count()]
+
+# map() vs flatMap() #
+MAP: it applies a function on each element of stream and stores the value returned by the function into a new Stream. 
