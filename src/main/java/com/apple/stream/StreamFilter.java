@@ -11,7 +11,7 @@ public class StreamFilter {
 		names.add("Ajeet");		names.add("Negan");
 		names.add("Amit");		names.add("Steve");
 			
-		// Count Strings with length less than 6 //
+		// FILTER: Count Strings with length less than 6 //
 		long count = names.stream()
 					.filter(str->str.length()<6)
 					.count();
@@ -20,11 +20,19 @@ public class StreamFilter {
 		
 		List<String> nameList = Arrays.asList("Melisandre","Sansa","Jon","Daenerys","Joffery");
 
+		// FILTER: With Multiple conditions //
         List<String> longnames = nameList.stream()  
-                .filter(str -> str.length() > 6 && str.length() < 8) // Multiple conditions //
+                .filter(str -> str.length() > 6 && str.length() < 8) 
                 .collect(Collectors.toList());  
 
         longnames.forEach(System.out::println);  
+        
+        // FILTER: null values 
+        List<String> list = Arrays.asList("Java", "Stream", null, "Filter", null);
+    	List<String> result = list.stream()
+    			.filter(str -> str!=null)
+    			.collect(Collectors.toList());
+    	result.forEach(System.out::println); 
 
 	   }  
 }
