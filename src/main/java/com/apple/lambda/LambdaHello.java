@@ -7,9 +7,8 @@ public class LambdaHello {
 		// Simple Lambda () -> {} //
 		StringConcat s= (str1, str2) -> str1+str2;
 		System.out.println(s.concatString("Hello", "World"));
-		
 				
-		// Using in-build java functional interface //
+		// Using in-build java functional interface, like- Predicate, Consumer and Supplier etc. //
         IntBinaryOperator sum = (a, b) -> a + b;
         System.out.println("Result: " + sum.applyAsInt(12, 100));
         
@@ -18,6 +17,10 @@ public class LambdaHello {
  		
  		// Calling Static method of interface //
  		StringConcat.newMove();
+ 		
+ 		// 
+ 		boolean result= LambdaUtils.isALongWord.test("");
+ 		System.out.println(result);
 	}	
 }
 

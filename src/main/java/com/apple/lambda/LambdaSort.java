@@ -1,7 +1,6 @@
 package com.apple.lambda;
 
 import java.util.Arrays;
-import java.util.Comparator;
 
 public class LambdaSort {
 	public static void main(String [] args){

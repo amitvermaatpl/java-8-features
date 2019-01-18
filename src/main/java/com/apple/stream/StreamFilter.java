@@ -17,10 +17,10 @@ public class StreamFilter {
 					.count();
 		
 		System.out.println("There are "+count+" strings with length less than 6");
-		
-		List<String> nameList = Arrays.asList("Melisandre","Sansa","Jon","Daenerys","Joffery");
 
-		// FILTER: With Multiple conditions //
+		// FILTER: With Multiple conditions //		
+		List<String> nameList = Arrays.asList("Melisandre","Sansa","Jon","Daenerys","Joffery");
+		
         List<String> longnames = nameList.stream()  
                 .filter(str -> str.length() > 6 && str.length() < 8) 
                 .collect(Collectors.toList());  

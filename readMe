@@ -18,8 +18,7 @@ A lambda expression in Java has these main parts: Lambda expression only has bod
 3. Body – This is the main part of the function.
 4. No return type – The java 8 compiler is able to infer the return type by checking the code. 
 
-# Stream API #
-
+# Stream API Examples: http://www.java2novice.com/java-8/streams/#
 By using streams we can perform various aggregate operations on the data returned from collections, 
 arrays, Input/Output operations. 
 
@@ -27,3 +26,8 @@ Create a stream()  ---> Perform a intermediate operation[filter()] ----> then pe
 
 # map() vs flatMap() #
 MAP: it applies a function on each element of stream and stores the value returned by the function into a new Stream. 
+
+
+##### OPTIONAL in java.util package #####
+It is used to represent a value is present or absent. This class has various utility methods to facilitate code
+to handle values as ‘available’ or ‘not available’ instead of checking null values.
