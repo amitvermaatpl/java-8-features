@@ -4,7 +4,7 @@ import java.util.function.IntBinaryOperator;
 
 public class LambdaHello {
 	public static void main(String[] args) {
-		// Simple Lambda () -> {} //
+		// *********  Simple Lambda () -> {} ********* //
 		StringConcat s= (str1, str2) -> str1+str2;
 		System.out.println(s.concatString("Hello", "World"));
 				
@@ -12,13 +12,13 @@ public class LambdaHello {
         IntBinaryOperator sum = (a, b) -> a + b;
         System.out.println("Result: " + sum.applyAsInt(12, 100));
         
-        // Calling default method of interface //
+        // ********* Calling default method of interface ********* //
  		s.move();
  		
- 		// Calling Static method of interface //
+ 		// ********* Calling Static method of interface ********* //
  		StringConcat.newMove();
  		
- 		// 
+ 		// ********* //
  		boolean result= LambdaUtils.isALongWord.test("");
  		System.out.println(result);
 	}	

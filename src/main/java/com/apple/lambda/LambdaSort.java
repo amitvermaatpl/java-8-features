@@ -18,13 +18,19 @@ public class LambdaSort {
 		// Sort dogs by weight //
 		Arrays.sort(dogArray, (Dog m, Dog n) -> m.getWeight() - n.getWeight()  );
 		printDogs(dogArray);
+		
+		// MethodReference: Sort by name//
+		Arrays.sort(dogArray, Dog::nameCompare);
+		printDogs(dogArray);
 	}
 	
 	public static void printDogs(Dog[] dogs) {
 		System.out.println("--Dog List--");
 		for (Dog d : dogs)
 			System.out.print(d);
-		System.out.println();
+		
+		// ForEach: Consumer, void accept(T t) //
+		// Arrays.asList(dogs).stream().forEach((d)-> System.out.println("-> "+d));
 	}
 }
 class Dog {
@@ -38,6 +44,9 @@ class Dog {
 		this.weight = w;
 	}
  
+	public static int nameCompare(Dog a1, Dog a2) {
+	    return a1.name.compareTo(a2.name);
+	}
 	
 	public String getName() {
 		return name;
