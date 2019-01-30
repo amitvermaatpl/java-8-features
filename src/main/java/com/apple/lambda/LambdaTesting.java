@@ -2,7 +2,7 @@ package com.apple.lambda;
 
 import java.util.function.IntBinaryOperator;
 
-public class LambdaHello {
+public class LambdaTesting {
 	public static void main(String[] args) {
 		// *********  Simple Lambda () -> {} ********* //
 		StringConcat s= (str1, str2) -> str1+str2;
@@ -21,6 +21,13 @@ public class LambdaHello {
  		// ********* //
  		boolean result= LambdaUtils.isALongWord.test("");
  		System.out.println(result);
+ 		
+ 		// ***** LAMBDA: Runnable Testing ***** //
+ 		
+ 		Runnable job= () -> System.out.println("Printing job.");
+ 		Thread worker1 = new Thread(job);
+ 		Thread worker2 = new Thread(()-> System.out.println("Reading Job."));
+ 		worker1.start(); worker2.start();
 	}	
 }
 

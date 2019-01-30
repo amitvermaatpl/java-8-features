@@ -11,7 +11,7 @@ public class LambdaSort {
 		Dog[] dogArray = { d1, d2, d3 };
 		printDogs(dogArray);
 	
-		// Sort dogs by name //
+		// Sort dogs by name: Comparator Lambda //
 		Arrays.sort(dogArray,  (Dog m, Dog n) -> m.getName().compareTo(n.getName()));
 		printDogs(dogArray);
 		
@@ -19,7 +19,7 @@ public class LambdaSort {
 		Arrays.sort(dogArray, (Dog m, Dog n) -> m.getWeight() - n.getWeight()  );
 		printDogs(dogArray);
 		
-		// MethodReference: Sort by name//
+		// *** MethodReference: Sort by name *** //
 		Arrays.sort(dogArray, Dog::nameCompare);
 		printDogs(dogArray);
 	}
