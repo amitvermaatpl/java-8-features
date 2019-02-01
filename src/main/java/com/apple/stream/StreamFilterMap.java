@@ -4,7 +4,7 @@ import java.util.HashMap;
 import java.util.Map;
 import java.util.stream.Collectors;
 
-public class FilterMap {
+public class StreamFilterMap {
 	public static void main(String[] args) {
 		
 		  // FILTER-1: Filter map by keys //
@@ -14,8 +14,7 @@ public class FilterMap {
 	      hmap.put(33, "Kiwi");  
 	      hmap.put(44, "Banana"); 
 
-	      Map<Integer, String> result = hmap.entrySet() 
-	          .stream() 
+	      Map<Integer, String> result = hmap.entrySet().stream() 
 	          .filter(map -> map.getKey().intValue() <= 22) 
 	          .collect(Collectors.toMap(map -> map.getKey(), map -> map.getValue()));  
 	  
