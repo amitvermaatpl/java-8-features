@@ -5,9 +5,10 @@ https://www.java-success.com/30-java-code-review-checklist-items/
 https://stackify.com/solid-design-principles/
 
 ###==### JAVA_8 Features: Java 8 In Action ###==###
+Why Lambda? Functional Programming
 
-# Lambda Expression #
-A function that doesn’t have a name and doesn’t belong to any class.
+What is Lambda? Fuctional vs Object Oriented
+> A function that doesn’t have a name and doesn’t belong to any class.
 
 //Syntax of lambda expression
 (parameter_list) -> {function_body}
@@ -18,7 +19,42 @@ A lambda expression in Java has these main parts: Lambda expression only has bod
 3. Body – This is the main part of the function.
 4. No return type – The java 8 compiler is able to infer the return type by checking the code. 
 
-# Stream API Examples: http://www.java2novice.com/java-8/streams/#
+Why Functional Programming? "Passing Behavior: Behavior Parameterization"
+[Previous: Behavior is associated with an Object/Class.]
+
+Example: Greeting Behavior: public void greet(.....Behavior.....)  // Pass the interface Greeting: perform()
+
+> HindiGreeting, EnglishGreeting etc. // JAVA 7 way: Polymorphism in Action // 
+
+> Here we are a passing a thing that have the behavior, not the behavior //***//
+
+How Lambda? "Functions in Isolation" and Treated as values. [Function as a Value]
+
+ablockOfCode= public void perform(){Syso("Hello World");}
+            = () -> {Syso("Hello World");}
+
+> greet( () -> Syso("Hindi Greeting") ) // JAVA 8 : Passing behavior directly //
+
+===== CONCEPTS ======
+
+greetingFunction= () -> Syso("Hindi Greeting");
+addFunction= (int a, int b) -> a+b;   
+
+1. Type of Lambda expression? == "Functional Interface" 
+2. Lambda vs Interface Implemenation = 
+3. Lambda vs Anonymous Class = 
+
+4. Type Inference? StringLengthLambda lambda= (String s) -> { s.length(); } === s -> s.length(); // Type-I // 
+
+5. Exception Handling in lambda
+6. Closures in lambda:= Comes in picture if we uses the scoped variable in Lambda-Expression, they freeze.
+
+7. Method References:: Another way to use 
+
+############ Stream API Examples: http://www.java2novice.com/java-8/streams/ #############
+
+CONCEPT: Collection of 6 Cars need some action:- Paint, fix the engine, fix the tires 
+
 By using streams we can perform various aggregate operations on the data returned from collections, 
 arrays, Input/Output operations. 
 

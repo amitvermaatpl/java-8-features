@@ -3,9 +3,13 @@ package com.apple.stream;
 import java.util.Arrays;
 import java.util.List;
 
-//CONCEPT: Collection of 6 Cars need some action:- Paint, fix the engine, fix the tires //
+// CONCEPT: Collection of 6 Cars need some action:- Paint, fix the engine, fix the tires //
 public class HelloStream {
-	// WAY-1: Person1(Painter) goes to each car for paint and same for rest of the cases: DRAWBACK // Iterating over the car 3 times: not efficient //
+	/*
+	 * WAY-1: Person1(Painter) goes to each car for paint and same for rest of the cases: 
+	 * DRAWBACK Iterating over the car 3 times: not efficient	 * 
+	 * 	
+	*/
 	public static void main(String[] args) {		
 
 		// ASSEMBLEY LINE: Basically we want some actions on our collection of objects(CAR etc) //		
